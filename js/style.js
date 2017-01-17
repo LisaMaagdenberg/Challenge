@@ -34,15 +34,11 @@ var catPicture = [
 	}
 ]
 
-function picture() {
-	$('#pic1').attr(catPicture[0]);
-	$('#pic2').attr(catPicture[1]);
-	$('#pic3').attr(catPicture[2]);
-	$('#pic4').attr(catPicture[3]);
-	$('#pic5').attr(catPicture[4]);
-	$('#pic6').attr(catPicture[5]);
-	$('#pic7').attr(catPicture[6]);
-	$('#pic8').attr(catPicture[7]);
-};
-
 $(document).ready(picture);
+
+function picture() {
+	for (var i = 1; i < catPicture.length + 1; i++) {
+		$("#pic" + i).attr(catPicture[i - 1]);
+	}
+}
+
