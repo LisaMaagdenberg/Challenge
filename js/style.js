@@ -37,8 +37,19 @@ var catPicture = [
 $(document).ready(picture);
 
 function picture() {
-	for (var i = 1; i < catPicture.length + 1; i++) {
-		$("#pic" + i).attr(catPicture[i - 1]);
+	for (var i = 0; i < catPicture.length; i++) {
+		var idNumber = i + 1;
+		var catImage = '<img src="' + catPicture[i].src + '"' + 
+			'class="' + catPicture[i].class + '"' +
+			'alt="' + catPicture[i].alt + '">';
+		$("#p" + idNumber).prepend(catImage);				
 	}
 }
 
+// function picture() {
+// 	for (var i = 0; i < catPicture.length; i++) {
+// 		var idNumber = i + 1;
+// 		var catImage = catPicture[i];
+// 		$("#p" + idNumber).prepend(catImage);
+// 	}
+// }
